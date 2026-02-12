@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Dev - Portfolio</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 grid-bg"></div>
+    <div class="fixed top-0 right-0"></div>
+    <div class="fixed bottom-0 left-0"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 glass-nav">
+        <div class="max-w-6xl mx-auto">
+            <a href="#home" class="flex items-center gap-3">
+                <span class="w-8 h-8">G</span>
+                <span class="text-2xl font-vegas text-white tracking-wide mt-1">GRACE <span class="text-blue-500">DEV.</span></span>
+            </a>
+            
+            <div class="flex items-center gap-8">
+                <div class="hidden md:flex">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">À propos</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#work">Projets</a>
+                    <a href="#design">Design</a>
+                </div>
+                <a href="#contact" class="px-5 py-2.5">Me contacter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- HOME SECTION (Slider) -->
+        <section id="home">
+            
+            <div id="slider-container">
+                <!-- Slide 1: Intro -->
+                <div class="slide active">
+                    <div class="inline-flex">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping"></span>
+                          <span class="relative inline-flex"></span>
+                        </span>
+                        Disponible pour freelance
+                    </div>
+                    
+                    <h1>
+                        GRACE <span>DEV</span>
+                    </h1>
+                    
+                    <p>
+                        Créative développeur & designer basée à Abidjan. Je conçois des expériences numériques immersives où le <span class="text-blue-400">bleu</span> rencontre l'innovation.
+                    </p>
+
+                    <div class="flex items-center justify-center gap-4">
+                        <a href="#work" class="px-8 py-3.5">
+                            Voir mes projets 
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-lg group-hover:translate-x-1"></iconify-icon>
+                        </a>
+                        <a href="#about" class="px-8 py-3.5">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Project Featured -->
+                <div class="slide">
+                    <span class="text-blue-500">Projet en vedette</span>
+                    <h2 class="text-5xl md:text-8xl font-vegas text-white mb-6">KOUMASSI IMMO</h2>
+                    <p class="text-lg">
+                        Une plateforme immobilière révolutionnaire conçue pour simplifier la recherche de logement à Abidjan.
+                    </p>
+                    
+                    <div class="w-full max-w-4xl mx-auto group">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1600&auto=format&fit=crop" alt="Interface Koumassi Immo">
+                        <div class="absolute inset-0 bg-gradient-to-t"></div>
+                        <div class="absolute bottom-0">
+                             <a href="#work">
+                                Voir les détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Quote -->
+                <div class="slide">
+                    <div class="w-20 h-20">
+                        <iconify-icon icon="solar:quote-up-bold" class="text-4xl"></iconify-icon>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-vegas text-white">
+                        "Le design est l'intelligence rendue visible."
+                    </h2>
+                    <p class="text-blue-400">- Alina Wheeler</p>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="absolute bottom-0 left-0 right-0 flex justify-center gap-6 z-20">
+                <button onclick="prevSlide()" class="p-3">
+                    <iconify-icon icon="solar:alt-arrow-left-linear" class="text-xl group-hover:scale-110"></iconify-icon>
+                </button>
+                <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 bg-blue-500" onclick="goToSlide(0)"></span>
+                    <span class="w-2.5 h-2.5 bg-zinc-700" onclick="goToSlide(1)"></span>
+                    <span class="w-2.5 h-2.5 bg-zinc-700" onclick="goToSlide(2)"></span>
+                </div>
+                <button onclick="nextSlide()" class="p-3">
+                    <iconify-icon icon="solar:alt-arrow-right-linear" class="text-xl group-hover:scale-110"></iconify-icon>
+                </button>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <div class="self-start">
+                À propos de moi
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-start mb-16">
+                <div class="relative h-[640px] group">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" alt="Grace Dev working">
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    <div class="absolute bottom-10 left-10 right-10">
+                        <div class="w-12 h-1"></div>
+                        <h3 class="text-white text-3xl font-vegas">PASSION &<br>CODE</h3>
+                        <p class="text-sm">Créer des ponts entre l'esthétique et la fonctionnalité technique.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center h-full py-6">
+                    <h2 class="text-5xl md:text-7xl font-vegas text-white">QUI SUIS-JE?</h2>
+                    <p class="text-lg text-zinc-400 leading-relaxed font-light mb-12">
+                        Jeune développeuse web passionnée et designer créative de 21 ans. Je combine le code et le design pour créer des expériences numériques uniques. <span class="text-blue-400 font-medium">L'innovation est mon moteur</span> et chaque projet est une nouvelle aventure.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+                        <div class="bg-zinc-900/40 border border-blue-500/10 p-6 rounded-2xl flex items-center gap-4 hover:bg-blue-900/10 hover:border-blue-500/30 group">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white">
+                                <iconify-icon icon="solar:code-circle-bold" class="text-2xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-0.5">Développement</h4>
+                                <p class="text-[11px] text-zinc-500 font-medium">Web & Mobile</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-900/40 border border-blue-500/10 p-6 rounded-2xl flex items-center gap-4 hover:bg-blue-900/10 hover:border-blue-500/30 group">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white">
+                                <iconify-icon icon="solar:palette-bold" class="text-2xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-0.5">Design</h4>
+                                <p class="text-[11px] text-zinc-500 font-medium">UI/UX & Brand</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-900/40 border border-blue-500/10 p-6 rounded-2xl flex items-center gap-4 hover:bg-blue-900/10 hover:border-blue-500/30 group">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white">
+                                <iconify-icon icon="solar:diploma-bold" class="text-2xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-0.5">Formation</h4>
+                                <p class="text-[11px] text-zinc-500 font-medium">Continue</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-900/40 border border-blue-500/10 p-6 rounded-2xl flex items-center gap-4 hover:bg-blue-900/10 hover:border-blue-500/30 group">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-white">
+                                <iconify-icon icon="solar:stars-bold" class="text-2xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white mb-0.5">21 ans</h4>
+                                <p class="text-[11px] text-zinc-500 font-medium">Passionnée</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <div class="self-start mx-auto">
+                Expertise
+            </div>
+
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-vegas text-white mb-4">
+                    MES COMPÉTENCES <span class="text-blue-500">& OUTILS</span>
+                </h2>
+                <p class="text-base max-w-2xl mx-auto">
+                    Une stack technologique moderne et polyvalente pour répondre à tous les besoins.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Development Card -->
+                <div class="bg-zinc-900/80 border border-blue-500/10 rounded-[32px] p-8 hover:border-blue-500/40 hover:shadow-2xl hover:shadow-blue-900/10 group">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white">
+                            <iconify-icon icon="solar:code-square-bold" class="text-3xl"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold text-blue-500/50 bg-blue-500/5 px-2 py-1 rounded-lg">DEV</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Développement</h3>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-white">HTML & CSS</span>
+                                <span class="text-xs font-bold text-blue-500">90%</span>
+                            </div>
+                            <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full w-[90%] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-medium text-white">TypeScript</span>
+                                    <span class="text-[9px] font-bold uppercase tracking-wide bg-blue-900/30 text-blue-300 px-1.5 py-0.5 rounded border border-blue-500/20">En apprentissage</span>
+                                </div>
+                                <span class="text-xs font-bold text-blue-500">60%</span>
+                            </div>
+                            <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full w-[60%] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between mb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-medium text-white">Dart & Flutter</span>
+                                    <span class="text-[9px] font-bold uppercase tracking-wide bg-blue-900/30 text-blue-300 px-1.5 py-0.5 rounded border border-blue-500/20">En apprentissage</span>
+                                </div>
+                                <span class="text-xs font-bold text-blue-500">45%</span>
+                            </div>
+                            <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full w-[45%] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card -->
+                <div class="bg-zinc-900/80 border border-blue-500/10 rounded-[32px] p-8 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-900/10 group">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-600/10 border border-purple-600/20 flex items-center justify-center text-purple-500 group-hover:bg-purple-600 group-hover:text-white">
+                            <iconify-icon icon="solar:pallete-2-bold" class="text-3xl"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold text-purple-500/50 bg-purple-500/5 px-2 py-1 rounded-lg">ART</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Design Graphique</h3>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-white">UI/UX Design</span>
+                                <span class="text-xs font-bold text-purple-500">85%</span>
+                            </div>
+                            <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-purple-500 rounded-full w-[85%] shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-medium text-white">Identité Visuelle</span>
+                                <span class="text-xs font-bold text-purple-500">80%</span>
+                            </div>
+                            <div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-purple-500 rounded-full w-[80%] shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Card -->
+                <div class="bg-zinc-900/80 border border-blue-500/10 rounded-[32px] p-8 hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-900/10 group">
+                     <div class="flex items-center justify-between mb-8">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-600/10 border border-emerald-600/20 flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white">
+                            <iconify-icon icon="solar:box-minimalistic-bold" class="text-3xl"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-500/50 bg-emerald-500/5 px-2 py-1 rounded-lg">TECH</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Outils</h3>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/50 border border-white/5 hover:border-emerald-500/30">
+                            <iconify-icon icon="solar:figma-linear" class="text-xl text-white"></iconify-icon>
+                            <span class="text-sm font-medium text-zinc-300">Figma</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/50 border border-white/5 hover:border-emerald-500/30">
+                            <iconify-icon icon="solar:laptop-minimalistic-linear" class="text-xl text-blue-400"></iconify-icon>
+                            <span class="text-sm font-medium text-zinc-300">VS Code</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/50 border border-white/5 hover:border-emerald-500/30">
+                            <iconify-icon icon="solar:branching-paths-down-linear" class="text-xl text-orange-400"></iconify-icon>
+                            <span class="text-sm font-medium text-zinc-300">Git</span>
+                        </div>
+                         <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/50 border border-white/5 hover:border-emerald-500/30">
+                            <iconify-icon icon="solar:gallery-wide-linear" class="text-xl text-pink-400"></iconify-icon>
+                            <span class="text-sm font-medium text-zinc-300">Adobe</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/50 border border-white/5 hover:border-emerald-500/30">
+                            <iconify-icon icon="solar:notes-minimalistic-linear" class="text-xl text-white"></iconify-icon>
+                            <span class="text-sm font-medium text-zinc-300">Notion</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/50 border border-white/5 hover:border-emerald-500/30">
+                            <iconify-icon icon="solar:terminal-linear" class="text-xl text-white"></iconify-icon>
+                            <span class="text-sm font-medium text-zinc-300">Terminal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- PROJECTS SECTION -->
+        <section id="work">
+            <div class="flex items-center justify-between mb-12">
+                <div class="flex flex-col gap-4">
+                     <div class="self-start">
+                        Portfolio
+                    </div>
+                    <h2 class="text-5xl font-vegas text-white">
+                        PROJETS
+                    </h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2">
+                    Voir tout <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- Project 1: Koumassi Immo -->
+                <article class="relative h-[500px] group">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop" alt="Koumassi Immo">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <div class="w-12 h-1 mb-4"></div>
+                        <h3 class="text-3xl font-vegas text-white mb-2">KOUMASSI IMMO</h3>
+                        
+                        <p class="text-sm text-blue-100/80 mb-6 max-w-md">
+                            Plateforme de recherche immobilière optimisée avec carte interactive et filtres avancés pour une UX fluide.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <span class="px-3 py-1.5 bg-white/10 backdrop-blur-md text-white border border-white/10 text-[10px] font-bold uppercase tracking-wider">
+                                    Vue.js
+                                </span>
+                                <span class="px-3 py-1.5 bg-white/10 backdrop-blur-md text-white border border-white/10 text-[10px] font-bold uppercase tracking-wider">
+                                    UI Design
+                                </span>
+                            </div>
+                            <a href="#" class="w-10 h-10 bg-blue-600/20 backdrop-blur-md text-blue-400 border border-blue-500/30 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white">
+                                <iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: TaskFlow -->
+                <article class="relative h-[500px] group">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop" alt="TaskFlow">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <div class="w-12 h-1 mb-4"></div>
+                        <h3 class="text-3xl font-vegas text-white mb-2">TASKFLOW PRO</h3>
+                        
+                        <p class="text-sm text-blue-100/80 mb-6 max-w-md">
+                            Application de productivité cross-platform permettant la collaboration en temps réel pour les équipes distantes.
+                        </p>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-3">
+                                <span class="px-3 py-1.5 bg-white/10 backdrop-blur-md text-white border border-white/10 text-[10px] font-bold uppercase tracking-wider">
+                                    Flutter
+                                </span>
+                                <span class="px-3 py-1.5 bg-white/10 backdrop-blur-md text-white border border-white/10 text-[10px] font-bold uppercase tracking-wider">
+                                    Cloud
+                                </span>
+                            </div>
+                            <a href="#" class="w-10 h-10 bg-blue-600/20 backdrop-blur-md text-blue-400 border border-blue-500/30 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white">
+                                <iconify-icon icon="solar:arrow-right-up-linear" class="text-xl"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- DESIGN GALLERY -->
+        <section id="design">
+             <div class="flex flex-col gap-4 mb-12">
+                 <div class="self-start">
+                    Créations
+                </div>
+                <h2 class="text-4xl font-vegas text-white">
+                    GALLERY DESIGN
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                
+                <!-- Design Card 1 -->
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" alt="Soirée Jazz">
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                         <div class="w-8 h-0.5 mb-2"></div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h4 class="text-xl font-vegas text-white">SOIRÉE JAZZ</h4>
+                                <p class="text-[10px] text-blue-200/80 uppercase tracking-wider">Affiche</p>
+                            </div>
+                             <button class="w-8 h-8 bg-white/10 backdrop-blur text-white hover:bg-blue-600">
+                                <iconify-icon icon="solar:eye-linear"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 2 -->
+                 <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600&auto=format&fit=crop" alt="Eco Life">
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <div class="w-8 h-0.5 mb-2"></div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h4 class="text-xl font-vegas text-white">ECO LIFE</h4>
+                                <p class="text-[10px] text-blue-200/80 uppercase tracking-wider">Brand</p>
+                            </div>
+                             <button class="w-8 h-8 bg-white/10 backdrop-blur text-white hover:bg-blue-600">
+                                <iconify-icon icon="solar:eye-linear"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 3 -->
+                 <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?q=80&w=600&auto=format&fit=crop" alt="Abstrait 01">
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <div class="w-8 h-0.5 mb-2"></div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h4 class="text-xl font-vegas text-white">ABSTRAIT 01</h4>
+                                <p class="text-[10px] text-blue-200/80 uppercase tracking-wider">Art</p>
+                            </div>
+                             <button class="w-8 h-8 bg-white/10 backdrop-blur text-white hover:bg-blue-600">
+                                <iconify-icon icon="solar:eye-linear"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 4 -->
+                 <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=600&auto=format&fit=crop" alt="Mariage">
+                    <div class="absolute inset-0 bg-gradient-to-t"></div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <div class="w-8 h-0.5 mb-2"></div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h4 class="text-xl font-vegas text-white">MARIAGE</h4>
+                                <p class="text-[10px] text-blue-200/80 uppercase tracking-wider">Print</p>
+                            </div>
+                             <button class="w-8 h-8 bg-white/10 backdrop-blur text-white hover:bg-blue-600">
+                                <iconify-icon icon="solar:eye-linear"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="bg-gradient-to-br from-zinc-900 to-blue-950/20 border border-blue-500/20 rounded-[48px] p-8 md:p-16 relative shadow-2xl">
+                
+                <div class="absolute top-0 right-0"></div>
+                
+                <div class="grid md:grid-cols-2 gap-16 relative z-10">
+                    <div>
+                        <div class="self-start mb-8">
+                            CONTACT
+                        </div>
+                        <h2 class="text-5xl md:text-6xl font-vegas text-white mb-6 leading-none">
+                            TRAVAILLONS<br><span class="text-blue-500">ENSEMBLE</span>
+                        </h2>
+                        <p class="text-zinc-300 text-lg font-light mb-10 max-w-sm">
+                            Un projet ? Une idée ? Ou simplement envie de discuter tech et design ? Mon inbox est ouverte.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <a href="mailto:contact@grace.dev" class="flex items-center gap-5 text-white hover:text-blue-400 group">
+                                <div class="w-12 h-12 bg-zinc-800/80 border border-white/5 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 group-hover:text-white">
+                                    <iconify-icon icon="solar:letter-linear" class="text-xl"></iconify-icon>
+                                </div>
+                                <span class="text-base font-medium">contact@grace.dev</span>
+                            </a>
+                            <div class="flex items-center gap-5 text-white hover:text-blue-400 group">
+                                <div class="w-12 h-12 bg-zinc-800/80 border border-white/5 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 group-hover:text-white">
+                                    <iconify-icon icon="solar:phone-calling-linear" class="text-xl"></iconify-icon>
+                                </div>
+                                <span class="text-base font-medium">+225 07 00 00 00 00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="space-y-5 bg-zinc-950/30 p-8 rounded-[32px] border border-blue-500/10 backdrop-blur-sm" onsubmit="event.preventDefault(); alert('Message envoyé !');">
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" placeholder="Votre nom" class="input-glow">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="email@exemple.com" class="input-glow">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="Dites-moi tout sur votre projet..." class="input-glow"></textarea>
+                        </div>
+                        <button type="submit">
+                            Envoyer le message <iconify-icon icon="solar:plain-3-bold" class="text-lg"></iconify-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-xs text-zinc-500">
+                © 2024 Grace Dev. Code & Design.
+            </p>
+            <div class="flex items-center gap-6">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function getDots() {
+             return document.querySelectorAll('#slider-container + div span');
+        }
+
+        function showSlide(index) {
+            const dots = getDots();
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => {
+                dot.classList.remove('bg-blue-500');
+                dot.classList.remove('shadow-[0_0_10px_rgba(59,130,246,0.8)]');
+                dot.classList.add('bg-zinc-700');
+            });
+
+            currentSlide = index;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.remove('bg-zinc-700');
+            dots[currentSlide].classList.add('bg-blue-500');
+            dots[currentSlide].classList.add('shadow-[0_0_10px_rgba(59,130,246,0.8)]');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>         
